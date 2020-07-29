@@ -10,7 +10,7 @@ using AlertLib;
 
 namespace AlertDemo.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : ControllerCustom
     {
         private readonly ILogger<HomeController> _logger;
 
@@ -21,7 +21,8 @@ namespace AlertDemo.Controllers
 
         public IActionResult Index(string key)
         {
-            TempData["GlobalSuccess"] = AlertLib.SelectAlert.Success["LoginSuccess"];
+            //TempData["GlobalSuccess"] = AlertLib.SelectAlert.Success["LoginSuccess"];
+            SendAlert("LoginSuccess", alerts.Success);
             return View();
         }
 
