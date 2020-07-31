@@ -21,7 +21,7 @@ namespace AlertDemo.Controllers
 
         public IActionResult Index(string key)
         {
-            TempData["GlobalSuccess"] = AlertLib.Alerts.Success["LoginSuccess"];
+            //TempData["GlobalSuccess"] = AlertLib.Alerts.Success["LoginSuccess"];
             SendAlert("LoginSuccess", alerts.Success);
             return View();
         }
