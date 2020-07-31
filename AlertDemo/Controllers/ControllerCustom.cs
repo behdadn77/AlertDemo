@@ -21,16 +21,16 @@ namespace AlertDemo.Controllers
             switch (alerts)
             {
                 case alerts.Success:
-                    TempData["GlobalSuccess"] = AlertLib.SelectAlert.Success[key];
+                    TempData["GlobalSuccess"] = AlertLib.Alerts.Success[key];
                     break;
                 case alerts.Warning:
-                    TempData["GlobalWarning"] = AlertLib.SelectAlert.Warning[key];
+                    TempData["GlobalWarning"] = AlertLib.Alerts.Warning[key];
                     break;
                 case alerts.Error:
-                    TempData["GlobalError"] = AlertLib.SelectAlert.Error[key];
+                    TempData["GlobalError"] = AlertLib.Alerts.Error[key];
                     break;
                 case alerts.Info:
-                    TempData["GlobalInfo"] = AlertLib.SelectAlert.Info[key];
+                    TempData["GlobalInfo"] = AlertLib.Alerts.Info[key];
                     break;
                 default:
                     break;
