@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using AlertLib.Model;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using static AlertLib.Model.AlertsModel;
 
 namespace AlertLib
 {
-    public class SelectAlert
+    public class Alerts
     {
         public static Dictionary<string, string> Success = new Dictionary<string, string>();
         public static Dictionary<string, string> Warning = new Dictionary<string, string>();
@@ -20,7 +21,7 @@ namespace AlertLib
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                Alerts alerts = JsonConvert.DeserializeObject<Alerts>(json);
+                AlertsModel.Alerts alerts = JsonConvert.DeserializeObject<AlertsModel.Alerts>(json);
                 foreach (JObject obj in alerts.AlertTypes.Success)
                 {
                     foreach (JProperty props in obj.Properties())

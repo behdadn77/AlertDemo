@@ -55,7 +55,7 @@ namespace AlertDemo
             });
 
             //added by me
-            AlertLib.SelectAlert.Initialize();
+            AlertLib.Alerts.Initialize();
         }
     }
 }
